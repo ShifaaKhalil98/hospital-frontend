@@ -1,9 +1,31 @@
+const patient_btn = document.getElementById("patient");
+const employee_btn = document.getElementById("employee");
+const admin_btn = document.getElementById("admin");
 const login_btn = document.getElementById("login");
-login_btn.addEventListener("click", submit_login);
+const login_form = document.getElementsByClassName("login")[0];
+const usertype_form = document.getElementsByClassName("usertype")[0];
 const form = document.querySelector("form");
+// var usertype = "";
+
+patient_btn.addEventListener("click", function () {
+  login_form.style.display = "block";
+  usertype_form.style.display = "none";
+  // usertype = "patient";
+});
+employee_btn.addEventListener("click", function () {
+  login_form.style.display = "block";
+  usertype_form.style.display = "none";
+  // usertype = "employee";
+});
+admin_btn.addEventListener("click", function () {
+  login_form.style.display = "block";
+  usertype_form.style.display = "none";
+  // usertype = "admin";
+});
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 });
+login_btn.addEventListener("click", submit_login);
 
 function submit_login() {
   let email = document.getElementById("email").value;
@@ -21,7 +43,8 @@ function submit_login() {
     .then((result) => {
       // console.log(result.data);
       if (result.data.status == "logged in successfully") {
-        alert("Welcome" + result.data.name);
+        alert("Welcome");
+        window.location.href = "index.html";
       } else if (result.data.status == "password is incorrect") {
         alert("password is incorrect!");
       } else if (result.data.status == "user does not exist") {

@@ -51,7 +51,8 @@ p {
   margin-right: auto;
 }
 .login,
-.signup {
+.signup,
+.usertype {
   text-align: center;
   width: 40%;
   margin-left: auto;
@@ -60,8 +61,10 @@ p {
   padding: 80px 0 100px 0;
   margin-top: 100px;
 }
-.login #login,
-.signup #signup {
+.login {
+  display: none;
+}
+button {
   background-color: var(--terquoise);
   border: none;
   width: 20%;

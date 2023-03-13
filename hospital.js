@@ -13,8 +13,7 @@ $(document).ready(function () {
         departmentsHTML += "<div class='dotted'>";
         departmentsHTML += "<h2>" + value.name + "</h2>";
         departmentsHTML += "<p>floor " + value.floor + "</p>";
-        departmentsHTML +=
-          "<a href='hospital.html' class='terquoise'>select department &#8594</a>";
+        departmentsHTML += "<a class='terquoise'>select department &#8594</a>";
         departmentsHTML += "</div>";
       });
       $("#departments").find(".flexbox").html(departmentsHTML);
@@ -33,8 +32,7 @@ $(document).ready(function () {
         servicesHTML += "<h2>" + value.name + "</h2>";
         servicesHTML += "<p>" + value.description + "</p>";
         servicesHTML += "<p>$" + value.cost + "</p>";
-        servicesHTML +=
-          "<a href='hospital.html' class='terquoise'>select service &#8594</a>";
+        servicesHTML += "<a class='terquoise'>select service &#8594</a>";
         servicesHTML += "</div>";
       });
       $("#services").find(".flexbox").html(servicesHTML);

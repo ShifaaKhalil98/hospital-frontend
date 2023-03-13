@@ -31,13 +31,11 @@ function submit_signup() {
       console.log(result);
       if (result.data.status == "user added successfully") {
         alert("user added successfully, try signing in now");
-        console.log("success");
+        window.location.href = "login.html";
       } else if (result.data.status == "password is not valid") {
         alert("Password is not valid");
-        console.log("password");
       } else if (result.data.status == "email already exists") {
         alert("Email already exists, try signing in instead");
-        console.log("email");
       }
     });
   }
